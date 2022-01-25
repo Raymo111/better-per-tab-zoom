@@ -1,0 +1,25 @@
+{
+  "name": "Better Per-Tab Zoom",
+  "version": "0.1",
+  "description": "Zoom tabs from the same domain individually. Open Source, offline, and no downloads.",
+  "homepage_url": "https://github.com/Raymo111/better-per-tab-zoom",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "manifest_version": 3,
+  "icons": {
+    "128": "icon128.png"
+  },
+  "permissions": ["activeTab", "tabs"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "js": ["controller.js"]
+    }
+  ]
+}
