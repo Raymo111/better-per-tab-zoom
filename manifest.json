@@ -10,7 +10,7 @@
   "icons": {
     "128": "icon128.png"
   },
-  "permissions": ["tabs"],
+  "permissions": [],
   "action": {
     "default_popup": "popup.html"
   },
